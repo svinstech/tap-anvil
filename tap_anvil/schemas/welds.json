@@ -26,14 +26,9 @@
       ]
     },
     "publishedAt": {
-      "anyOf": [
-        {
-          "type": "null"
-        },
-        {
-          "format": "date-time",
-          "type": "string"
-        }
+      "type": [
+        "null",
+        "string"
       ]
     },
     "hasUnpublishedChanges": {
@@ -102,19 +97,19 @@
     "createdAt": {
       "type": [
         "null",
-        "object"
+        "string"
       ]
     },
     "updatedAt": {
       "type": [
         "null",
-        "object"
+        "string"
       ]
     },
     "archivedAt": {
       "type": [
         "null",
-        "object"
+        "string"
       ]
     },
     "expiresAt": {

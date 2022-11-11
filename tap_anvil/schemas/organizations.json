@@ -79,13 +79,13 @@
     "createdAt": {
       "type": [
         "null",
-        "object"
+        "string"
       ]
     },
     "updatedAt": {
       "type": [
         "null",
-        "object"
+        "string"
       ]
     },
     "subscribedPlanFeatures": {

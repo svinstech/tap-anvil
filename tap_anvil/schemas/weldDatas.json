@@ -115,31 +115,31 @@
     "createdAt": {
       "type": [
         "null",
-        "object"
+        "string"
       ]
     },
     "updatedAt": {
       "type": [
         "null",
-        "object"
+        "string"
       ]
     },
     "dataUpdatedAt": {
       "type": [
         "null",
-        "object"
+        "string"
       ]
     },
     "expiresAt": {
       "type": [
         "null",
-        "object"
+        "string"
       ]
     },
     "archivedAt": {
       "type": [
         "null",
-        "object"
+        "string"
       ]
     },
     "weldEid": {

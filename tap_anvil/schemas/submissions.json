@@ -85,19 +85,19 @@
     "createdAt": {
       "type": [
         "null",
-        "object"
+        "string"
       ]
     },
     "updatedAt": {
       "type": [
         "null",
-        "object"
+        "string"
       ]
     },
     "archivedAt": {
       "type": [
         "null",
-        "object"
+        "string"
       ]
     },
     "weldDataEid": {
