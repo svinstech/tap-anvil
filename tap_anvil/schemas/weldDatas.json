@@ -113,58 +113,33 @@
       ]
     },
     "createdAt": {
-      "anyOf": [
-        {
-          "type": "null"
-        },
-        {
-          "format": "date-time",
-          "type": "string"
-        }
+      "type": [
+        "null",
+        "object"
       ]
     },
     "updatedAt": {
-      "anyOf": [
-        {
-          "type": "null"
-        },
-        {
-          "format": "date-time",
-          "type": "string"
-        }
+      "type": [
+        "null",
+        "object"
       ]
     },
     "dataUpdatedAt": {
-      "anyOf": [
-        {
-          "type": "null"
-        },
-        {
-          "format": "date-time",
-          "type": "string"
-        }
+      "type": [
+        "null",
+        "object"
       ]
     },
     "expiresAt": {
-      "anyOf": [
-        {
-          "type": "null"
-        },
-        {
-          "format": "date-time",
-          "type": "string"
-        }
+      "type": [
+        "null",
+        "object"
       ]
     },
     "archivedAt": {
-      "anyOf": [
-        {
-          "type": "null"
-        },
-        {
-          "format": "date-time",
-          "type": "string"
-        }
+      "type": [
+        "null",
+        "object"
       ]
     },
     "weldEid": {
