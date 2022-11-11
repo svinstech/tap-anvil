@@ -84,3 +84,28 @@ In practice, this means that prefacing commits with `feat:` will create a minor 
 ### Running a GraphQL query locally
 
 Use the [Anvil Postman collection](https://www.postman.com/useanvil/workspace/anvil/overview).
+
+
+### Caveat
+
+Previously for `CreatedAt`, `UpdatedAt` and some other date attribute, we have 
+```
+ "createdAt": {
+      "anyOf": [
+        {
+          "type": "null"
+        },
+        {
+          "format": "date-time",
+          "type": "string"
+        }
+	]
+    },
+```
+this kind of type for them. Because we're using `target-snowflake` downstream of `tap-anvil` to load this data into our datawarehouse in Snowflake and there is a [known issue](https://github.com/transferwise/pipelinewise-target-snowflake/issues/228) in `target-snowflake` that it will skip `anyOf` type attribute. So we just make this a `string` type like below.
+```
+"type": [
+        "null",
+        "string"
+      ]
+```

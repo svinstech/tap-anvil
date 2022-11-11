@@ -9,7 +9,11 @@ QUERIES_DIR = Path(__file__).parent / Path("./queries")
 
 
 class AnvilStream(GraphQLStream):
-    """anvil stream class."""
+    """
+    anvil stream class.
+    note: treat attributes like updatedAt as a string type
+        anyOf type will be ignored by target-snowflake
+    """
 
     url_base = "https://graphql.useanvil.com"
     primary_keys = ["eid"]
