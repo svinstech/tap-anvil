@@ -94,7 +94,7 @@
         "string"
       ]
     },
-    "archivedAt": {
+    "completedAt": {
       "type": [
         "null",
         "string"
