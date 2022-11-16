@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "tap-anvil"
-version = "0.1.6"
+version = "0.1.7"
 description = "A Singer tap for Anvil, a tool for programmatically filling out PDF forms."
 authors = ["Kshitij Aranke <kshitij@aranke.org>"]
 keywords = ["singer", "tap", "anvil"]
