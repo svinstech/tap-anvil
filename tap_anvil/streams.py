@@ -27,20 +27,39 @@ class WeldsStream(AnvilStream):
 
     name = "welds"
     parent_stream_type = OrganizationsStream
-    jsonpath = "$.data.organization.welds[*]"
+    jsonpath = "$.data.organization.welds.items[*]"
     records_jsonpath: Any = jsonpath
     ignore_parent_replication_keys = True
+
+    def get_next_page_token(
+        self,
+        response: requests.Response,
+        previous_token: Optional[int],
+    ) -> Optional[int]:
+        """Handle pagination."""
+        data = response.json()
+        page = data["data"]["organization"]["welds"]
+
+        if data:
+            page_index = int(page["page"])
+            page_count = int(page["pageCount"])
+            page_size = int(page["pageSize"])
+            if page_index < page_count:
+                return page_index + page_size
+
+        return None
 
     def prepare_request_payload(
         self, context: Optional[Dict[str, Any]], next_page_token: Optional[int]
     ) -> Dict[str, Any]:
         """Inject GraphQL variables into payload."""
+        offset = next_page_token or 0
         assert context is not None
         slug = context["slug"]
 
         return {
             "query": self.query,
-            "variables": {"slug": slug},
+            "variables": {"slug": slug, "offset": offset},
         }
 
     def get_child_context(
