@@ -1,26 +1,32 @@
-query($slug: String!) {
+query WeldsQuery($slug: String!, $offset: Int = 0, $limit: Int = 100) {
     organization(organizationSlug: $slug) {
-        welds {
-            versionNumber
-            versionId
-            latestDraftVersionNumber
-            publishedNumber
-            publishedAt
-            hasUnpublishedChanges
-            id
-            eid
-            slug
-            name
-            visibility
-            config
-            hasSigners
-            signatureProviderType
-            availableSignatureProviderTypes
-            remainingSubmissions
-            createdAt
-            updatedAt
-            archivedAt
-            expiresAt
+        welds(offset: $offset, limit: $limit) {
+            page
+            pageCount
+            pageSize
+            rowCount
+            items {
+                versionNumber
+                versionId
+                latestDraftVersionNumber
+                publishedNumber
+                publishedAt
+                hasUnpublishedChanges
+                id
+                eid
+                slug
+                name
+                visibility
+                config
+                hasSigners
+                signatureProviderType
+                availableSignatureProviderTypes
+                remainingSubmissions
+                createdAt
+                updatedAt
+                archivedAt
+                expiresAt
+            }
         }
     }
 }
