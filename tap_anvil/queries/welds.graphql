@@ -21,7 +21,6 @@ query WeldsQuery($slug: String!, $offset: Int = 0, $limit: Int = 100) {
                 hasSigners
                 signatureProviderType
                 availableSignatureProviderTypes
-                remainingSubmissions
                 createdAt
                 updatedAt
                 archivedAt

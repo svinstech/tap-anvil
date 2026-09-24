@@ -18,12 +18,9 @@ query {
             updatedAt
             subscribedPlanFeatures
             subscriptionActivity
-            totalUsedUnits
             weldCompleteWebhookStats
             weldCompleteStats
             etchCompleteStats
-            remainingSubmissions
-            remainingEtchCompletions
             signatureProviderType
             availableSignatureProviderTypes
         }
